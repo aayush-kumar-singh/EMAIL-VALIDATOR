@@ -1,0 +1,177 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Apply base styles to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #343a40; /* Dark gray navbar */
+  color: white;
+  padding: 19px 12px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover or changes */
+}
+
+/* Navigation List */
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  padding: 0 13px;
+  font-size: 14px;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+ul li a:hover {
+  color: #cccccc; /* Light gray on hover */
+}
+
+/* Logo */
+.logo img {
+  width: 20px;
+  filter: invert(1); /* Inverts icon color to white */
+}
+.logo span {
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+/* Main container styling */
+main {
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Light background */
+  color: #1c1e21; /* Near-black text */
+}
+
+/* Central container */
+.container {
+  max-width: 80vw;
+  margin: auto;
+  padding: 15px;
+}
+.container h1 {
+  padding: 12px 0;
+}
+
+/* Email input box */
+input[type='text'] {
+  min-width: 23vw;
+  padding: 10px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  color: #1c1e21;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+input[type='text']:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Submit button styling */
+.btn {
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  background-color: #0056b3; /* Darker on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Result container styling */
+#resultCont {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+/* Each result row */
+#resultCont div {
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+/* First letter uppercase styling */
+#resultCont div::first-letter {
+  text-transform: uppercase;
+}
+
+/* Key (label) styling */
+#resultCont div strong {
+  color: #333;
+}
+
+/* Value styling */
+#resultCont div {
+  color: #007bff; /* Blue for values */
+}
+
+/* Footer styling */
+footer {
+  font-size: 13px;
+  background-color: #343a40;
+  color: #cccccc;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments for mobile screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: 13px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .logo {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 18px;
+  }
+
+  input[type='text'] {
+    min-width: 70vw;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
